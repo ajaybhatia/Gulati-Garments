@@ -55,7 +55,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Login - Lovely Opticals");
+        setTitle("Login");
         setResizable(false);
 
         pnlInputs.setBorder(javax.swing.BorderFactory.createTitledBorder("User"));
@@ -224,6 +224,7 @@ public class Login extends javax.swing.JFrame {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 java.awt.EventQueue.invokeLater(new Runnable() {
                     public void run() {
+                        new Dashboard().setVisible(true);
                     }
                 });
                 setVisible(false);
