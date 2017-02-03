@@ -6,6 +6,7 @@ package com.ajaybhatia.utilities;
  * and open the template in the editor.
  */
 
+import com.ajaybhatia.entities.controllers.RoleJpaController;
 import com.ajaybhatia.entities.controllers.UserJpaController;
 import java.awt.Component;
 import javax.persistence.Persistence;
@@ -18,6 +19,12 @@ import javax.swing.JOptionPane;
  */
 public class Helper {
 
+    public static RoleJpaController getRoleControllerInstance() {
+        return new RoleJpaController(
+            Persistence.createEntityManagerFactory("Gulati-GarmentsPU")
+        );
+    }
+    
     public static UserJpaController getUserControllerInstance() {
         return new UserJpaController(
             Persistence.createEntityManagerFactory("Gulati-GarmentsPU")
